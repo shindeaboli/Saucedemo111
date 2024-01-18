@@ -29,6 +29,12 @@ public class LoginPage extends BaseClass {
 	public void clickOnLoginButton() {
 		Wait.click(loginButton);
 	}
+	
+	
+
+	public String validateTitle() {
+
+		return 	driver.getTitle();	}
 
 }
 
