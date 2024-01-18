@@ -1,5 +1,7 @@
 package Steps;
 
+import org.testng.Assert;
+
 import BaseLayer.BaseClass;
 import PageLayer.LoginPage;
 import io.cucumber.java.en.Given;
@@ -25,5 +27,11 @@ public class LoginPageSteps {
 	@Then("user click on login button")
 	public void user_click_on_login_button() {
 		loginpage.clickOnLoginButton();
+	}
+	
+	@Given("user is capture the title")
+	public void user_is_capture_the_title() {
+		loginpage = new LoginPage();
+		Assert.assertEquals(loginpage.validateTitle(), "Swag Labs");
 	}
 }
